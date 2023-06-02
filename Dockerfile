@@ -8,7 +8,7 @@ WORKDIR /app
 COPY . /app
 
 # Compile the C++ code
-RUN g++ -o main "Sistema de Colas.cpp" lcgrand.cpp
+RUN g++ -o main Sistema\ de\ Colas.cpp 
 
 # Set the default command to run when the container starts
 CMD ["./main"]
