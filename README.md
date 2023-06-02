@@ -9,3 +9,8 @@
 
 4. El archivo "lcgrand.cpp" se tomó de
    http://www.sju.edu/~sforman/courses/2000F_CSC_5835/, que es una página de simulaciones. Buscar en el link de Simlib.c ( una libreria para simulaciones )
+
+### Correr el simulador con Docker
+`docker build -t queue-simulator .`
+`docker run queue-simulator`
+
