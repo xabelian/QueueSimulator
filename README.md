@@ -12,5 +12,6 @@
 
 ### Correr el simulador con Docker
 `docker build -t queue-simulator .`
+
 `docker run queue-simulator`
 
