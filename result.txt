@@ -1,17 +1,19 @@
 Sistema de Colas Simple
 
-Tiempo promedio de llegada      8.702 minutos
+Tiempo promedio de llegada      8.700 minutos
 
-Tiempo promedio de atencion           6.162 minutos
+Tiempo promedio de atencion           6.200 minutos
 
 Numero de clientes          1000
 
 
 
-Espera promedio en la cola     13.774 minutos
+Espera promedio en la cola     12.628 minutos
 
-Numero promedio en cola     1.577
+Numero promedio en cola     1.431
 
-Uso del servidor 1:           0.684
+Uso del servidor 1:           0.674
 
-Tiempo de terminacion de la simulacion    8736.288 minutos
+Tiempo de terminacion de la simulacion    8826.091 minutos
+
+Probabilidad Teorica (formula) erlang C        0.713: 

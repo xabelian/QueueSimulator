@@ -75,7 +75,6 @@ void simuladorPrincipal(void){
     fclose(resultados);
     fclose(tiempo_atencion);
     fclose(tiempo_entre_llegadas);
-
 }
 
 /* Funcion Principal */
@@ -254,6 +253,35 @@ void salida(void) /* Funcion de Salida. */
     }
 }
 
+/* Your average factorial implementation */
+double factorial(int n) {
+    if (n == 0)
+        return 1;
+    return n * factorial(n - 1);
+}
+
+/* Usada para simplificar suba en Teoretical */
+double calculate_sum(double A, int n) {
+    double result = 0;
+    for (int i = 0; i < n; i++) {
+        double term = pow(A, i) / factorial(i);
+        result += term;
+    }
+    return result;
+}
+
+/* Erlang teorica desde la formula */
+
+double theoretical_erlang_c(double arrival_rate, double service_rate, int num_servers) {
+    double A = (1/arrival_rate) * service_rate;
+    int N = num_servers;
+
+    double numerator = pow(A, N) / factorial(N)) * (N / (N - A);
+    double denominator = calculate_sum(A, N) + (pow(A, N) / factorial(N)) * (N / (N - A));
+
+    return numerator / denominator;
+}
+
 void reportes(void) /* Funcion generadora de reportes. */
 {
     /* Calcula y estima los estimados de las medidas deseadas de desempe?o */
@@ -267,6 +295,8 @@ void reportes(void) /* Funcion generadora de reportes. */
                 area_estado_servidores[i] / tiempo_simulacion);
     }
     fprintf(resultados, "Tiempo de terminacion de la simulacion%12.3f minutos", tiempo_simulacion);
+
+    fprintf(resultados, "\n\nProbabilidad Teorica (formula) erlang C %12.3f: ", theoretical_erlang_c(media_entre_llegadas, media_atencion, num_servidores));
 }
 
 void actualizar_estad_prom_tiempo(void) /* Actualiza los acumuladores de
@@ -295,3 +325,4 @@ float expon(float media) /* Funcion generadora de la exponencias */
 
     return -media * log(lcgrand(1));
 }
+
