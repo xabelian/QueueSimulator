@@ -276,7 +276,7 @@ double theoretical_erlang_c(double arrival_rate, double service_rate, int num_se
     double A = (1/arrival_rate) * service_rate;
     int N = num_servers;
 
-    double numerator = pow(A, N) / factorial(N)) * (N / (N - A);
+    double numerator = (pow(A, N) / factorial(N)) * (N / (N - A));
     double denominator = calculate_sum(A, N) + (pow(A, N) / factorial(N)) * (N / (N - A));
 
     return numerator / denominator;

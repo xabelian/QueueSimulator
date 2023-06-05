@@ -8,12 +8,20 @@ Numero de clientes          1000
 
 
 
-Espera promedio en la cola     12.628 minutos
+Espera promedio en la cola      0.003 minutos
 
-Numero promedio en cola     1.431
+Numero promedio en cola     0.000
 
-Uso del servidor 1:           0.674
+Uso del servidor 1:           0.396
 
-Tiempo de terminacion de la simulacion    8826.091 minutos
+Uso del servidor 2:           0.186
 
-Probabilidad Teorica (formula) erlang C        0.713: 
+Uso del servidor 3:           0.069
+
+Uso del servidor 4:           0.017
+
+Uso del servidor 5:           0.005
+
+Tiempo de terminacion de la simulacion    8821.573 minutos
+
+Probabilidad Teorica (formula) erlang C        0.001: 
